@@ -1,0 +1,286 @@
+
+/* This page assignment has been tested in Chrome, Safari, Firefox, and Opera browsers.*/
+
+body {
+	font-family: sans-serif;
+	font-family: 'Exo 2', sans-serif;
+}
+
+.clearfix::after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+img {
+	width: 100%;
+}
+
+.wrap {
+	margin: 0 auto;
+	margin-top: .5em;
+	width: 96%;
+	max-width: 300px;
+}
+
+header {
+	width: 100%;
+	height: 3em;
+	background: rgba(0,0,0,.85);
+	text-align: left;
+}
+
+.contain {
+	max-width: 996px;
+	margin: 0 auto;
+}
+
+h1 {
+	font-size: 1.5em;
+	padding-left: 1em;
+	padding-top: .5em;
+	text-transform: uppercase;
+	color: #fff;
+}
+
+.credits {
+	padding-top: .5em;
+	opacity: .7;
+}
+
+.credits p {
+	font-size: .8em;
+	padding-top: .25em;
+}
+
+h2 {
+	font-size: 1.25em;
+
+}
+
+.col1 {
+	text-align: left;
+}
+
+.col1 p {
+	font-family: 'Exo 2', sans-serif;
+	font-weight: 300;
+	line-height: 20px;
+	padding-bottom: 1em;
+	margin: 1em 0;
+}
+
+.col1 p span {
+	font-weight: 400;
+	font-size: 1.125em;
+}
+
+.col1 .img-holder {
+display: none;
+}
+
+.col2 {
+	padding-bottom: 4em;
+}
+
+.beluga-playlist {
+	opacity: .7;
+	padding-bottom: .5em;
+	font-size: 1.125em;
+	font-weight: 400;
+}
+
+footer {
+	width: 100%;
+	height: 200px; 
+	background: rgba(0,0,0,.85);
+}
+
+/* Video Player */
+
+.video-container {
+	width: 300px;
+	height: 168px;
+	overflow: hidden;
+	display: block;
+	user-select: none; 
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	margin: 0 auto;
+}
+
+	video {
+		width: 100%;
+		height: 100%;
+	}
+
+.controls-container {
+	width: 100%;
+	background: rgb(46,46,46);
+	background: rgba(0,0,0,0.6);
+	position: relative; 
+	bottom: 22px;
+	transition: .5s ease-in-out;
+}
+
+.video-container:hover .controls-container {
+	bottom: 58px;
+}
+
+.time-field {
+	color: #fff;
+	font-family: 'Helvetica', 'Arial', sans-serif;
+}
+
+.pbar-container {
+	height: 5px; 
+	background-color: rgba(110,110,110,1);
+}
+
+	.pbar {
+		height: 5px; 
+		background-color: orange;
+	}
+
+.buttons-container {
+	height: 40px;
+	padding-top: .5em;
+}
+
+	.buttons-container img,
+	.buttons-container div {
+		display: inline-block;
+		
+	}
+
+	.play-button {
+		position: relative;
+		top: 8px;
+		float: left;
+		padding-left: 1em;
+		width: 22px;
+		height: 22px;
+	}
+
+	.time-field {
+		float: left;
+		position: relative;
+		left: 2em; 
+		top: 14px;
+		font-size: 14px;
+	}
+
+	.right-controls {
+		float: right;
+		position: relative; 
+		top: 7px;
+	}
+
+	.sound-button {
+		padding-right: .5em;
+		width: 20px;
+	}
+
+	.sbar-container {
+		height: 100px; 
+		width: 20px;
+		background-color: black;
+		position: relative; 
+		right: 2em;
+		bottom: 6em;
+		opacity: 0;
+		transition: .5s;
+	} 
+	
+
+	.fullscreen-button {
+		padding-right: 1em;
+		width: 20px;
+	}
+
+	.pbar-container,
+	.pbar,
+	.sbar,
+	.buttons-container img {
+		cursor: pointer;
+	}
+
+/* Media Queries*/
+
+@media screen and (min-width: 480px){
+
+	.wrap {
+		max-width: 480px;
+		margin: 0 auto;
+		padding-top: 1em;
+	}
+
+	.video-container {
+		width: 480px;
+		height: 270px;
+	}
+}
+
+@media screen and (min-width: 767px) {
+
+	.wrap {
+		max-width: 720px;
+	}
+
+	.video-container {
+		width: 720px;
+		height: 410px;
+	}
+
+	.flex-med {
+		display: flex;
+	}
+
+	.col1 p {
+		width: 82%;
+		padding-right: 1em;
+	}
+
+	.col1 .img-holder {
+		width:  18%;
+		display: inline-block;
+	}
+
+	.col1 .img-holder img {
+	float: right;
+	padding-top: 1.125em;
+
+	}
+
+	.playlist-container {
+		float: left;
+	}
+}
+
+@media screen and (min-width: 980px) { 
+
+	.wrap {
+		max-width: 980px;
+		margin: 0 auto;
+	}
+
+	.video-container {
+		width: 980px;
+		height: 554px;
+	}
+
+	.controls-container {
+		max-width: 980px;
+	}
+
+	.text {
+		margin-top: 1em;
+	}
+
+	.col1 p {
+		font-size: 1.15em;
+		line-height: 26px;
+	}
+
+ }

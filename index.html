@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+
+ <!-- This page assignment has been tested in Chrome, Safari, Firefox, and Opera browsers. -->
+<meta name="robots" content="noindex">
+<html lang="en">
+<head>
+<meta name="robots" content="noindex">	
+	<meta charset="utf-8">
+	
+	<title>Responsive Audio & Video</title>
+	
+	<meta name="description" content="Treehouse assignment #7 - Interactive Video Player by Demetri Enriquez">
+	
+  <!-- Mobile-friendly viewport -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link href="https://fonts.googleapis.com/css?family=Exo+2:300,400" rel="stylesheet">
+
+   <!-- Style sheet link -->
+   <link href="css/reset.css" rel="stylesheet" media="all">
+	<link href="css/main.css" rel="stylesheet" media="all">
+	<link href="css/playlist.css" rel="stylesheet" media="all">
+</head>
+
+
+<body>
+
+
+	<header>
+		<div class="contain">	
+			<h1>HTML5 Audio &amp; Video</h1>
+		</div>
+	</header>
+
+	<div class="wrap">
+
+		<div class="video-container">
+		  <video class="video-player" id="video" poster="video/poster.jpg">
+			  <source src="http://www.demetripdx.com/student-projects/video-audio-page/video/video.mp4" type="video/mp4">
+			  <source src="http://www.demetripdx.com/student-projects/video-audio-page/video/video.ogv" type="video/ogg">
+			  <track label="English Subtitles" kind="subtitles" srclang="en" src="video/captions.vtt">
+			  Your browser does not support the HTML5 video tag. Please update it. 
+		  </video>
+
+			<div class="controls-container" id="controls-container">
+				<div id="pbar-container" class="pbar-container">
+					<div id="pbar" class="pbar"></div>
+					<div class="pbar-padding"></div>
+				</div>
+
+				<div id="buttons-container" class="buttons-container">
+					<img id="play-button" class="play-button" src="icons/play-icon.png" alt="play button">
+					<div id="time-field" class="time-field">
+						0:00 / 0:00
+					</div>
+					<div class="right-controls">
+						<img id="sound-button" class="sound-button" src="icons/volume-on-icon.png" alt="sound button">
+						<img id="fullscreen-button" class="fullscreen-button" src="icons/fullscreen-icon.png" alt="fullscreen button">
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="credits">
+			<h2>Like Eyes For Dreaming</h2>
+			<p>Artist: D. Enriquez</p>
+		</div>
+		<div class="flex">
+			<div class="col1 flex-med">
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ut volutpat elit. Donec dignissim iaculis sapien ut vestibulum. Donec nunc arcu, porttitor at molestie pharetra, auctor a augue. Pellentesque sed nisl eu dolor vulputate faucibus eget ut tortor. Nulla facilisi. Fusce eget scelerisque ligula, eget gravida risus. Suspendisse volutpat urna eget lobortis vestibulum. Fusce auctor dapibus neque vitae dignissim. Phasellus eleifend aliquet rhoncus. In hac habitasse platea dictumst.</p>
+				<div class="img-holder">
+					<img src="icons/beluga_beluga.jpg" alt="album cover">
+				</div>
+			</div>
+
+			<div class="col2 clearfix">
+				<div class="playlist-container .clearfix">
+					<h2 class="beluga-playlist">Beluga Playlist</h2>
+				    <div class="column add-bottom">
+				        <div id="mainwrap">
+				            <div id="nowPlay">
+				                <span class="left" id="npAction">Paused...</span>
+				                <span class="right" id="npTitle"></span>
+				            </div>
+				            <div id="audiowrap">
+				                <div id="audio0">
+				                    <audio preload id="audio1" controls="controls" controls controlsList="nodownload">Your browser does not support HTML5 Audio!</audio>
+				                </div>
+				                <div id="tracks">
+				                    <a id="btnPrev">&laquo;</a>
+				                    <a id="btnNext">&raquo;</a>
+				                </div>
+				            </div>
+				            <div id="plwrap">
+				                <ul id="plList"></ul>
+				            </div>
+				        </div>
+				    </div>
+				</div> <!--end playlist -->
+			</div><!--end col2 -->
+
+		</div>
+	</div><!--/wrap -->
+	<footer></footer>
+
+	<!-- Media Element -->
+	<script src="scripts/jquery.js"></script>
+	<script src="scripts/player.js"></script>
+	<script src="scripts/playlist.js"></script>
+
+	<script>
+	    var vid = document.getElementById("video");
+	    vid.autoplay = false;
+	    vid.load();
+	</script>
+
+</body>
+</html>
